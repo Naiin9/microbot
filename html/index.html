@@ -3,14 +3,102 @@
   <style type="text/css">
     .centered
       {
-      text-align:center;
-      margin-top:0px;
-      margin-bottom:0px;
-      padding:0px;
+        text-align:center;
+        margin-top:0px;
+        margin-bottom:0px;
+        padding:0px;
       }
-  </style>
-  <body>
-    <p class="centered"><img src="microbot.png" alt="microbot"/></p>
-    <p class="centered">Container hostname: XXX</p>
-  </body>
+    .tbcenter{
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+/* General Table Styling */
+table {
+    width: 400px;
+        
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-collapse: collapse; /* Collapse borders for a clean look */
+    margin-top: 20px; /* Add some space above the table */
+    margin-bottom: 20px; /* Add some space below the table */
+    font-family: Arial, sans-serif; /* Common, readable font */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners for the table */
+    overflow: hidden; /* Ensures border-radius is applied to content */
+}
+
+/* Table Header Styling */
+th {
+    background-color: #2c3e50; /* Dark blue/gray background for headers */
+    color: #ffffff; /* White text for headers */
+    padding: 12px 15px; /* Padding inside header cells */
+    text-align: left; /* Align header text to the left */
+    font-weight: bold; /* Bold text for headers */
+    text-transform: uppercase; /* Uppercase header text */
+    letter-spacing: 0.05em; /* A little space between letters */
+}
+
+/* Table Data Cell Styling */
+td {
+    padding: 12px 15px; /* Padding inside data cells */
+    border-bottom: 1px solid #dddddd; /* Light gray border at the bottom of each row */
+    color: #333333; /* Dark gray text for data cells */
+}
+
+/* Alternating Row Colors (Zebra Stripping) */
+tr:nth-child(even) {
+    background-color: #f8f8f8; /* Light gray for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+/* Hover Effect on Rows */
+tr:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Last Row Border Removal (Optional - for a cleaner look at the bottom) */
+tr:last-child td {
+    border-bottom: none;
+}
+
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 25%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 75%;
+}
+</style>
+<body>
+<p class="centered"><img src="microbot2.png" alt="microbot"/><p>
+<table class="tbcenter">
+  <tr>
+    <th>Resource</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>NODE</td>
+    <td>NODE_NAME</td>
+  </tr>
+  <tr>
+    <td>NODE IP</td>
+    <td>NODE_IP</td>
+  </tr>
+  <tr>
+    <td>POD</td>
+    <td>POD_NAME</td>
+  </tr>
+  <tr>
+    <td>POD IP</td>
+    <td>POD_IP</td>
+  </tr>
+</table>
+</body>
 </html>
